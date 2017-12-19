@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Button askButton = findViewById(R.id.askButton);
-        final int [] answers = {
+        final int[] answers = new int[] {
                 R.drawable.ball1,
                 R.drawable.ball2,
                 R.drawable.ball3,
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         askButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int guru = num.nextInt(4);
+                int guru = num.nextInt(5);
                 magicBall.setImageResource(answers[guru]);
             }
         });
